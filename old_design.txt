@@ -1,0 +1,62 @@
+'Design your own Sokoban levels here.
+'Include a brief explanation to each level why the algorithmic improvement
+'  that is targeted makes a big difference on this level
+
+'Level improving from ucs to ucs -d
+'This level is designed to have many deadlocks and unsolvable states if pushed wrong.
+'Thus, with deadlock detection, UCS can ignore a lot of search since a deadlock won't lead to a solution
+Level p5-level-1
+  #####
+###   #
+#+ $  #
+### $.#
+#.##$ #
+# # . ##
+#$ *$$.#
+#   .  #
+########
+'Level improving from ucs -d to f -d
+'This level is designed to have several different very long paths with a single box. With action compression, it can find the 
+'shortest path and have a "singular" action to push the box. UCS on the otherhand, has to tirelessly iterate through individual actions
+' to find the path rather than doing it in one swoop.
+Level p5-level-2
+###############################################################################################################################################
+#@                                                                                                                                            #
+#        #####                #############            #############                   #############                                          #
+#                                                                                                                                             #
+#  ############################################################################################################################################
+#                                                                                                                                             #
+# #############################################################################################################################################
+#                                                                                                                                             #
+#  ############################################################################################################################################
+#                                                                                                                                             #
+# #############################################################################################################################################
+#                                                                                                                                             #
+#  ############                         ##############################                         ############                ################## #
+#                                                                                                                                             #
+# ##########################################################################################################################################  #
+#                                                                                                                                             #
+#  ############                         ##############################                         ############                ################## #
+#                                                                                                                                             #
+# ########################################################################################################################################### #
+#.$                                                                                                                                           #
+###############################################################################################################################################
+'Level improving from f -d to fa -d
+'The addition of the heurstic heavily assists in this problem since the boxes are so close to the goals
+'The solver can immediately know what box pushes will move them closer to the goal rather than exploring all
+'the empty space.
+Level p5-level-3
+###########################
+#. $                   $ .#
+#                         #
+#    @                    #
+#                         #
+#                         #
+#.  $                 $  .#
+###########################
+
+'Level improving from fa -d to fa2 -d
+Level p5-level-4
+
+'Optional: level for the Sokoban contest
+Level p5-contest
