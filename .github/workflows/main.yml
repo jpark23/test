@@ -20,6 +20,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: use snyk to check for code vulnerabilites
         
-        uses: snyk/actions/python@main
+        uses: snyk/actions/python@master
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
