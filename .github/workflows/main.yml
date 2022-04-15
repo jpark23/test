@@ -15,11 +15,11 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@master
+      - uses: actions/checkout@main
 
       # Runs a single command using the runners shell
       - name: use snyk to check for code vulnerabilites
         
-        uses: snyk/actions/python@master
+        uses: snyk/actions/python@main
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
