@@ -93,7 +93,7 @@ def main():
         (ratio, (mode1, mode2)) = config[type]
         
         print(f'Comparing level {level} for {mode1} vs {mode2}')
-        (solved, time1, time2) = grader_helper(level, mode1, mode2, solution_code, level_file)
+        #(solved, time1, time2) = grader_helper(level, mode1, mode2, solution_code, level_file)
         success = solved and time1 >= 5 and ((time2 / time1) < ratio)
         testpassed = 'passed' if success else 'failed'
         results[level] = (testpassed, time1, time2)
